@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* AVAILABLE DATE FORMAT CHAT GPT */
+.field {
+    display: grid;
+    gap: .5rem;
+    font-family: system-ui, sans-serif;
+    grid-row: 1/3;
+    grid-column: 2/3;
+}
+
+
+.date-like-select {
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: .75rem;
+    border: 1px solid #e6e9f5;
+    background: #f7f9ff;
+    font-size: 1rem;
+    color: #0f172a;
+    outline: none;
+    appearance: none;
+    /* Chevron a la derecha (SVG embebido) */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23192a56' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 10px 50px;
+    box-sizing: border-box;
+}
+
+.date-like-select::placeholder {
+    color: #6b7280;
+}
+
+.date-like-select:focus {
+    border-color: #9db2ff;
+    box-shadow: 0 0 0 4px #e7ecff;
+}
+
+/* Cuando esté en modo date, ocultamos el ícono nativo de WebKit para conservar el look */
+.date-like-select::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/* aqui termina */
+
+
+
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #dcdcdc;
+    padding: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 40px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 0px 20px;
+}
+
+
+#fullname {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding: .9rem 2.5rem .9rem 1rem;
+    border-radius: .75rem;
+    border: 1px solid #e6e9f5;
+    background: #f7f9ff;
+    font-size: 1rem;
+    color: #0f172a;
+    outline: none;
+    appearance: none;
+}
+
+#emaillabel {
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+#email {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    padding: .9rem 2.5rem .9rem 1rem;
+    border-radius: .75rem;
+    border: 1px solid #e6e9f5;
+    background: #f7f9ff;
+    font-size: 1rem;
+    color: #0f172a;
+    outline: none;
+    appearance: none;
+}
+
+#numberlabel {
+    grid-row: 5/6;
+    grid-column: 1/2;
+}
+
+.numberdiv {
+    grid-row: 6/7;
+    grid-column: 1/2;
+    gap: 0px    ;
+}
+
+#messagelabel {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+#message {
+    padding: 10px;
+    grid-row: 4/7;
+    grid-column: 2/3;
+    font-size: 1rem;
+    color: #0f172a;
+    outline: none;
+    appearance: none;
+    resize: none;
+    border: 1px solid #e6e9f5;
+    background: #f7f9ff;
+    border-radius: 8px;
+}
+
+#button {
+    grid-row: 7/8;
+    grid-column: 2/3;
+    align-self: flex-end;
+    color: white;
+    background-color: #3B82F6;
+    height: 40px;
+    width: 130px;    
+    border-radius: 8px;
+    justify-self: end;
+}
+
+#code{
+    border: 1px solid #e6e9f5;
+    background: #f7f9ff;
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+#phonenumber{
+    border: 1px solid #e6e9f5;
+    background: #f7f9ff;
+    width: 80vh;
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+
+.numberdiv{
+    display: flex;
+}
